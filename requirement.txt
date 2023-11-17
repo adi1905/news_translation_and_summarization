@@ -1,0 +1,3 @@
+googletrans==4.0.0-rc1
+transformers==4.12.2
+txtai==4.2.1
