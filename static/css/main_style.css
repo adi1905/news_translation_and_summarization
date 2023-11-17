@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=UnifrakturMaguntia&display=swap');
+
+/* .main-page {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+} */
+
+body{
+    background-image: url('img/main_page2.png');
+    overflow: hidden;
+}
+
+.app-logo{
+    display: flex;
+}
+.app-logo img{
+    margin-left: 13px;
+    transform: rotate(15deg);
+}
+
+.app-logo .app-name{
+    margin-top: 15px;
+}
+/* body {
+    background-image: url('img/main_page2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* object-fit: cover; 
+    
+}*/
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-name {
+    font-size: 36px;
+    font-family: 'UnifrakturMaguntia',sans-serif;
+    font-weight: 700;
+    margin-left: 20px;
+    color: #B2BEB5;
+    /* text-transform: uppercase; */
+    position: relative;
+}
+
+.app-name::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #454545;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.app-name:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Rest of the CSS code ... */
+
+.nav-ul {
+    display: flex;
+    justify-content: space-between; /* Pushes the links to the right side */
+    align-items: center; /* Vertically aligns the links */
+    padding: 0; /* Remove default padding */
+    list-style: none;
+    margin-right: 40px;
+    /* margin-bottom: px; */
+}
+
+.nav-ul li {
+    margin: 0 15px; /* Add spacing between links */
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+.nav-ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s; /* Smooth transition on hover */
+}
+
+.nav-ul li:nth-child(4) {
+    position: relative;
+}
+
+.nav-ul li:nth-child(4) i {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 20px;
+    color: gold; /* You can change the color as needed */
+    /* transform: rotate(45deg); */
+}
+
+.nav-ul li a::before,
+.nav-ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #454545;
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-ul li a::before {
+    top: 0;
+    left: 0;
+    transform-origin: right;
+}
+
+.nav-ul li a::after {
+    bottom: 0;
+    right: 0;
+    transform-origin: left;
+}
+
+.nav-ul li a:hover {
+    color: #ff4500; /* Change text color on hover */
+}
+
+.nav-ul li a:hover::before,
+.nav-ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-ul li a:hover::before {
+    transform-origin: left;
+}
+
+.nav-ul li a:hover::after {
+    transform-origin: right;
+}
+
+/* Rest of the CSS code ... */
+.main-content{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    font-size: 120px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+.name:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    line-height: 150%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: .5px;
+}
+
+.main-buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.main-buttons button {
+    padding: 10px 25px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.main-buttons button:nth-child(1) {
+    background: #50C878;
+}
+
+.main-buttons button:nth-child(2) {
+    background: #D22B2B;
+}
+
+.main-buttons button:nth-child(1):hover {
+    background: #50C878; /* Change to your desired hover background color */
+    border: 1px solid transparent; /* Change to your desired hover border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust box shadow as needed */
+    transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+.main-buttons button:nth-child(2):hover{
+    background: #D22B2B; /* Change to your desired hover background color */
+    border: 1px solid transparent; /* Change to your desired hover border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust box shadow as needed */
+    transform: scale(1.05); /* Slight scale increase on hover */
+}
+
