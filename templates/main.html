@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsyMedia- Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='css/img/main_logo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+    <script>
+        function redirectToTranslate() {
+            window.location.href = "{{ url_for('translate') }}";
+        }
+
+        function redirectToSummarize() {
+            window.location.href = "{{ url_for('summarize') }}";
+        }
+    </script>
+</head>
+<body>
+    <section class="main-page">
+        <div class="nav-container">
+            <div class="app-logo">
+                <div class="app-name">
+                    NewsyMedia
+                </div>
+                <img src="/static/css/img/microphone.png" alt="" width="70px" height="70px">
+            </div>
+            <ul class="nav-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('services_template') }}">Services</a></li>
+		        <li><a href="{{ url_for('sentiment') }}"><i class='fas fa-crown'></i>Sentiment Analyzer</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1 class="name">NewsyMedia</h1>
+            <p class="subtitle">Translate, Summarize, Stay Informed.</p>
+            <div class="main-buttons">
+                <button class="translate" onclick="redirectToTranslate()">Translate</button>
+                <button class="summarize" onclick="redirectToSummarize()">Summarize</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

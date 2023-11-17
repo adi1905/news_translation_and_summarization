@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsyMedia - Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='css/img/main_logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Our Services</h1>
+        <div class="rows">
+            <div class="row">
+                <div class="image-container">
+                    <img src="/static/css/img/translator.jpg" alt="Temp-image">
+                </div>
+                <div class="service-content">
+                    <p>Empower global communication with our News Translation service. Translate news content into multiple languages, preserving context and offering Text-to-Speech integration for a seamless, fast, and reliable user experience.</p>
+                </div>
+                <div class="explore-container">
+                    <a href="{{ url_for('translate') }}">EXPLORE</a>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-container">
+                    <img src="/static/css/img/summarization.jpg" alt="Temp-image">
+                </div>
+                <div class="service-content">
+                    <p>Streamline news absorption using our Summarization model. Condense articles, extract crucial insights, and present concise summaries. Empower users with rapid understanding of vital news stories and updates effortlessly.</p>
+                </div>
+                <div class="explore-container">
+                    <a href="{{ url_for('summarize') }}">EXPLORE</a>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-container">
+                    <img src="/static/css/img/sentiment-analysis.jpg" alt="Temp-image">
+                </div>
+                <div class="service-content">
+                    <p>Gain deeper insights into news sentiments with our Sentiment Analysis model. Analyze articles, discern emotional tones, and understand public opinion for a comprehensive understanding of news narratives and trends</p>
+                </div>
+                <div class="explore-container">
+                    <a href="{{ url_for('sentiment') }}">EXPLORE</a>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
