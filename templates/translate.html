@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsyMedia - Translation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/translate.css') }}">
+    <script src="{{ url_for('static', filename='js/translate.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/text-to-speech.js') }}"></script>
+    <link rel="icon" href="{{ url_for('static', filename='css/img/main_logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <h1>NewsyMedia Translator</h1>
+            <form id="translation-form">
+                <textarea id="text-input" placeholder="Enter text to translate" rows="8" required></textarea>
+                <div class="button-container">
+                    <select id="language-select" required>
+                        <option value="" disabled selected>Select Target Language</option>
+                        <!-- Generate dropdown options dynamically from the language mapping -->
+                        {% for language, code in language_mapping.items() %}
+                            <option value="{{ language }}">{{ language }}</option>
+                        {% endfor %}
+                    </select>
+                    <button id="translate-button" type="submit" class = "glow-on-hover">Translate</button>
+                </div>
+            </form>
+        </div>
+        <div class="right-half">
+            <h1>Translated Ouptut</h1>
+            <div id="translated-output"></div>
+            <div class="extra-button">
+                <button id="hear-button" class="hear-button hear-button-white hear-button-animated" type="click">
+                    <span class="headphones">🎧</span>
+                    <span class="hear-text">Hear</span>
+                </button>
+                <button id="copy-button" class="copy-button copy-button-white copy-button-animated">
+                    <span class="clipboard">📋</span>
+                    <span class="copy-text">Copy</span>
+                </button>
+            </div>
+            <input type="hidden" id="language-code" value="">
+        </div>
+    </div>
+</body>
+</html>
+
